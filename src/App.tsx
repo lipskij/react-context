@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Nav from "./Components/Nav";
 import { ThemeContext, themes } from "../src/Contexts/theme-context";

@@ -7,19 +7,19 @@ function App() {
   const [theme, toggleTheme] = useState(themes.light);
 
   return (
-    <div className='App'>
-      <ThemeContext.Provider
-        value={{
-          theme,
-          toggleTheme: () => {
-            toggleTheme(theme === themes.light ? themes.dark : themes.light);
-          },
-        }}
-      >
+    <ThemeContext.Provider
+      value={{
+        theme,
+        toggleTheme: () => {
+          toggleTheme(theme === themes.light ? themes.dark : themes.light);
+        },
+      }}
+    >
+      <div className={theme === themes.light ? "App light" : "App dark"}>
         <Nav />
         <h1>Learning React Context</h1>
-      </ThemeContext.Provider>
-    </div>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

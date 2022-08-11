@@ -8,7 +8,10 @@ const Switch: React.FC = () => {
         <>
           {theme === themes.light ? <span>Dark</span> : <span>Light</span>}
           <input type="checkbox" id="switch" />
-          <label style={{ background: theme }} htmlFor="switch" onClick={toggleTheme}>
+          <label
+            style={{ background: theme }}
+            htmlFor="switch"
+            onClick={toggleTheme}>
             Toggle
           </label>
         </>
